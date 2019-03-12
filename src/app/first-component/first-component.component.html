@@ -1,0 +1,15 @@
+<p class="example">
+  first-component works!
+  {{myName}}
+  {{exampleInput}}
+  <!-- ngModel will bound whatever you put input into variable myName without 
+       needing to call this.setState() like in React-->
+  <input #appMyDirective type="text" ngModel=([myName]) />
+</p>
+<!-- Pipe Creation where pipe would add whatever css customization to data-->
+<h1>Help {{exampleInput | uppercase}}</h1>
+<!-- testing custom pipe where number woulded be rounded down using the 'round' 
+     using pipe I created with the command ng generate pipe pipename-->
+<h1>Number {{ myNum | round}} </h1>
+<!-- testing service or Redux function -->
+<h1>{{user}}</h1>
